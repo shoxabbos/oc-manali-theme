@@ -1,0 +1,51 @@
+description = "top-header"
+==
+<!--Preload-->
+<div class="preloader">
+	<div class="preloader_image">
+		<div class="sk-double-bounce">
+			<div class="sk-child sk-double-bounce1"></div>
+			<div class="sk-child sk-double-bounce2"></div>
+		</div>
+	</div>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-white">
+	<div class="container">
+		<a class="navbar-brand" href="{{ 'index'|page }}">
+			<img src=" {{ 'assets/img/logo.png'|theme }} " alt="Logo">
+		</a>
+		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="main-nav">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="{{ 'index'|page }}">Home</a>					
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ 'about'|page }}">About Us</a>					
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ 'tours'|page }}">Tours</a>					
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ 'destinations'|page }}">Destinations</a>					
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ 'hotels'|page }}">Hotels</a>					
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ 'gallery'|page }}">Gallery</a>					
+				</li>					
+				<li class="nav-item">
+					<a class="nav-link" href="{{ 'blog'|page }}">Blog</a>					
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{{ 'contact_us'|page }}">Contact Us</a>					
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<!-- end nav -->
