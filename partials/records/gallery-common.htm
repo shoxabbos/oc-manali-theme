@@ -1,0 +1,55 @@
+[records]
+activeOnly = 0
+areaSlug = "galereya"
+categorySlug = "{{ :category }}"
+tagSlug = "{{ :tag }}"
+recordPage = 0
+recordPageSlug = "{{ :record }}"
+limit = 10
+pageSlug = "{{ :page }}"
+orderBy = "name"
+orderByDirection = "ASC"
+==
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="section-title text-center">
+				<h2><span>Gallery</span></h2>
+				<p>Sorem ipsum dolor sit amet, consectetur adipisicing Suscipit votas aperiam Sorem ipsum dolor consectur adipisicing elit.</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<ul id="filter-list">
+			    <li class="filter active" data-filter="all">All</li>
+			    
+			    {% for record in records.items %}
+				    <li class="filter" data-filter="{{record.id}}"> {{record.name}} </li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="gallery-outer">
+	<ul class="gallery-items">
+		
+		{% for record in records.items %}
+		
+		    {% for image in record.images %}
+        		<li class="filtr-item" data-category ="{{record.id}}">
+        			<div class="gallery-inner">
+        				<img src=" {{image.path}} " alt="" />
+        				<div class="gallery-overlay">
+        					<a href="{{image.path}}" class="venobox" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
+        				</div>
+        			</div>
+        		</li>
+    		{% endfor %}
+    		
+		{% endfor %}
+		
+	</ul>
+</div>

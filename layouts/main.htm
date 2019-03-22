@@ -9,6 +9,9 @@
     <meta name="author" content="">
     <title>Manali - Tour & Travels Agency Template</title>
 	<link rel="shortcut icon" href=" {{ 'assets/img/favicon.png'|theme }} " type="image/x-icon">
+	
+	
+	{% styles %}
     <!-- Bootstrap Core CSS -->
     <link href=" {{ 'assets/css/bootstrap.min.css'|theme }} " rel="stylesheet">
     <!-- Animate CSS -->
@@ -24,36 +27,24 @@
 	<!-- Main CSS -->
 	<link href=" {{ 'assets/style.css'|theme }} " rel="stylesheet">
 	
+	
 </head>
 <body>
     
 	<!-- HEADER -->
-	<header>
-	
-		<!-- TOP HEADER -->
-			
-			{% partial 'top-header' %}
-			
-		<!-- /TOP HEADER -->
-		
-	</header>
+	{% partial 'top-header' %}
 	<!-- /HEADER -->
-
-
 
 
     {% page %}
 
-
-	
 	
 	<!-- FOOTER -->
-	
-        {% partial 'footer' %}
-		    
+    {% partial 'footer' %}
 	<!-- /FOOTER -->
 
     <!-- jQuery -->
+    {% scripts %}
     <script src=" {{ 'assets/js/jquery-3.3.1.min.js'|theme }} "></script>
 	<script src=" {{ 'assets/js/popper.min.js'|theme }} "></script>
     <script src=" {{ 'assets/js/bootstrap.min.js'|theme }} "></script>
@@ -66,6 +57,7 @@
 	<script src=" {{ 'assets/mail-js/form-validator.min.js'|theme }} "></script>
 	<script src=" {{ 'assets/mail-js/contact-form-script.js'|theme }} "></script>
     <script src=" {{ 'assets/js/script.js'|theme }} "></script>
+	
 	
 </body>
 </html>

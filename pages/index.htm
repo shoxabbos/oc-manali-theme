@@ -2,143 +2,23 @@ title = "index"
 url = "/"
 layout = "main"
 is_hidden = 0
+
+[slider]
+slide_show_id = 1
 ==
 <section class="carousel slide" id="banner" data-ride="carousel" data-pause="false">
-	<div class="carousel-inner">
-		<div class="carousel-item active" style="background-image:url({{ 'assets/img/banner/slide-1.jpg'|theme }})">
-			<div class="banner-caption">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="hero-text">
-								<h6 class="animated fadeInDown">Consetetur Adipiscing</h6>
-								<h1 class="animated fadeInUp">Best travel agency</h1>
-								<p class="animated fadeInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
-								<a href="{{'contact-us'|page}}" class="btn btn-primary animated fadeInUp">Contact Us</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="carousel-item" style="background-image:url({{'assets/img/banner/slide-2.jpg'|theme }})">
-			<div class="banner-caption">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="hero-text">
-								<h6 class="animated fadeInLeft">Consetetur Adipiscing</h6>
-								<h1 class="animated fadeInLeft">Trusted Travel Agency</h1>
-								<p class="animated fadeInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
-								<a href="{{'contact-us'|page}}" class="btn btn-primary animated fadeInLeft">Contact Us</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="carousel-item" style="background-image:url({{ 'assets/img/banner/slide-3.jpg'|theme }})">
-			<div class="banner-caption">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="hero-text">
-								<h6 class="animated fadeInRight">Consetetur Adipiscing</h6>
-								<h1 class="animated fadeInRight">Get Exclusive Tour</h1>
-								<p class="animated fadeInRight">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum tincidunt ullamcorper magna, in tincidunt ex auctor et.</p>
-								<a href="{{'contact-us'|page}}" class="btn btn-primary animated fadeInRight">Contact Us</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<ol class="carousel-indicators">
-			<li data-target="#banner" data-slide-to="0" class="active"></li>
-			<li data-target="#banner" data-slide-to="1"></li>
-			<li data-target="#banner" data-slide-to="2"></li>
-		</ol>
-	</div>
+    {% component 'slider' %}
 </section>
 <!-- end banner -->
 
+
+
 <section class="section-spacing">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title text-center">
-					<h2><span>Our Services</span></h2>
-					<p>Sorem ipsum dolor sit amet, consectetur adipisicing Suscipit votas aperiam Sorem ipsum dolor consectur adipisicing elit.</p>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6 col-md-6 col-lg-4">
-				<div class="service-item text-center wow fadeIn">
-					<div class="icon">
-						<i class="flaticon-train"></i>
-					</div>
-					<h3>Rail Booking</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin lobortis turpis, sit amet aliquet metus.</p>
-				</div>
-			</div>
-			
-			<div class="col-sm-6 col-md-6 col-lg-4">
-				<div class="service-item text-center wow fadeIn">
-					<div class="icon">
-						<i class="flaticon-slumber"></i>
-					</div>
-					<h3>Hotel Booking</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin lobortis turpis, sit amet aliquet metus.</p>
-				</div>
-			</div>
-			
-			<div class="col-sm-6 col-md-6 col-lg-4">
-				<div class="service-item text-center wow fadeIn">
-					<div class="icon">
-						<i class="flaticon-air-freight"></i>
-					</div>
-					<h3>Flight Booking</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin lobortis turpis, sit amet aliquet metus.</p>
-				</div>
-			</div>
-			
-			<div class="col-sm-6 col-md-6 col-lg-4">
-				<div class="service-item text-center wow fadeIn">
-					<div class="icon">
-						<i class="flaticon-tag"></i>
-					</div>
-					<h3>Ticket Booking</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin lobortis turpis, sit amet aliquet metus.</p>
-				</div>
-			</div>
-			
-			<div class="col-sm-6 col-md-6 col-lg-4">
-				<div class="service-item text-center wow fadeIn">
-					<div class="icon">
-						<i class="flaticon-ship"></i>
-					</div>
-					<h3>Cruises Booking</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin lobortis turpis, sit amet aliquet metus.</p>
-				</div>
-			</div>
-			
-			<div class="col-sm-6 col-md-6 col-lg-4">
-				<div class="service-item text-center wow fadeIn">
-					<div class="icon">
-						<i class="flaticon-house"></i>
-					</div>
-					<h3>Amazing Tour</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sollicitudin lobortis turpis, sit amet aliquet metus.</p>
-				</div>
-			</div>
-		</div>
-	</div>
+    {% partial 'records/services' %}
 </section>
 <!-- end services -->
+
+
 
 <section class="section-spacing inverse-bg">
 	<div class="container">
@@ -314,101 +194,15 @@ is_hidden = 0
 </section>
 <!-- end destination -->
 
+
+
 <section class="section-spacing bottom-none inverse-bg">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title text-center">
-					<h2><span>Gallery</span></h2>
-					<p>Sorem ipsum dolor sit amet, consectetur adipisicing Suscipit votas aperiam Sorem ipsum dolor consectur adipisicing elit.</p>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<ul id="filter-list">
-					<li class="filter active" data-filter="all">All</li>
-					<li class="filter" data-filter="1">Asia</li>
-					<li class="filter" data-filter="2">Africa</li>
-					<li class="filter" data-filter="3">Europe</li>
-					<li class="filter" data-filter="4">America</li>
-					<li class="filter" data-filter="5">Australia</li>
-				</ul><!-- @end #filter-list -->
-			</div>
-		</div>
-	</div>
-	
-	<div class="gallery-outer">
-		<ul class="gallery-items">
-			<li class="filtr-item" data-category ="1">
-				<div class="gallery-inner">
-					<img src=" {{ 'assets/img/gallery/1.jpg'|theme }} " alt="" />
-					<div class="gallery-overlay">
-						<a href="img/gallery/1.jpg" class="venobox" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
-					</div>
-				</div>
-			</li>
-			<li class="filtr-item" data-category ="3">
-				<div class="gallery-inner">
-					<img src=" {{ 'assets/img/gallery/2.jpg'|theme }} " alt="" />
-					<div class="gallery-overlay">
-						<a href="{{'assets/img/gallery/2.jpg'|theme}}" class="venobox" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
-					</div>
-				</div>
-			</li>
-			<li class="filtr-item" data-category ="2">
-				<div class="gallery-inner">
-					<img src=" {{ 'assets/img/gallery/3.jpg'|theme }} " alt="" />
-					<div class="gallery-overlay">
-						<a href="{{'assets/img/gallery/3.jpg'|theme}}" class="venobox" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
-					</div>
-				</div>
-			</li>
-			<li class="filtr-item" data-category ="5">
-				<div class="gallery-inner">
-					<img src=" {{ 'assets/img/gallery/4.jpg'|theme }} " alt="" />
-					<div class="gallery-overlay">
-						<a href="{{'assets/img/gallery/4.jpg'|theme}}" class="venobox" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
-					</div>
-				</div>
-			</li>
-			<li class="filtr-item" data-category ="2">
-				<div class="gallery-inner">
-					<img src=" {{ 'assets/img/gallery/5.jpg'|theme }} " alt="" />
-					<div class="gallery-overlay">
-						<a href="{{'assets/img/gallery/5.jpg'|theme}}" class="venobox" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
-					</div>
-				</div>
-			</li>
-			<li class="filtr-item" data-category ="4">
-				<div class="gallery-inner">
-					<img src=" {{ 'assets/img/gallery/6.jpg'|theme }} " alt="" />
-					<div class="gallery-overlay">
-						<a href="{{'assets/img/gallery/6.jpg'|theme}}" class="venobox" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
-					</div>
-				</div>
-			</li>
-			<li class="filtr-item" data-category ="5">
-				<div class="gallery-inner">
-					<img src=" {{ 'assets/img/gallery/7.jpg'|theme }} " alt="" />
-					<div class="gallery-overlay">
-						<a href="{{'assets/img/gallery/7.jpg'|theme}}" class="venobox" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
-					</div>
-				</div>
-			</li>
-			<li class="filtr-item" data-category ="2">
-				<div class="gallery-inner">
-					<img src=" {{ 'assets/img/gallery/8.jpg'|theme }} " alt="" />
-					<div class="gallery-overlay">
-						<a href="{{'assets/img/gallery/8.jpg'|theme}}" class="venobox" data-gall="gallery"><i class="fa fa-picture-o"></i></a>
-					</div>
-				</div>
-			</li>
-		</ul>
-	</div>
+    {% partial 'records/gallery-home' %}
 </section>
 <!-- end gallery -->
+
+
+
 
 <section class="section-spacing inverse-bg">
 	<div class="container">
@@ -477,53 +271,10 @@ is_hidden = 0
 </section>
 <!-- end featured hotels -->
 
+
+
 <!-- Feedback -->
 <section class="section-spacing">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="section-title text-center">
-					<h2><span>Tourist feedback</span></h2>
-					<p>Sorem ipsum dolor sit amet, consectetur adipisicing Suscipit votas aperiam Sorem ipsum dolor consectur adipisicing elit.</p>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="col-md-12 col-lg-10 offset-lg-1">
-				<div class="testimonials-outer">
-					<div class="cover-img wow fadeIn">
-						<img src=" {{ 'assets/img/feedback/1.jpg'|theme }} " alt="">
-					</div>
-					<div id="reviews-carousel" class="carousel slide wow fadeInUp" data-ride="carousel" data-pause="false">
-						<span class="flaticon-quote"></span>
-						<div class="carousel-inner">
-							<div class="carousel-item active">
-								<h3>African Forest</h3>
-								<h4>28 October, 2018</h4>
-								<p>Duis non condimentum nunc. Nunc quis turpis eu est tincidunt rutrum. Cras a purus quis sem tincidunt egestas vel id lacus. Nunc sed volutpat erat. Duis sollicitudin.</p>
-							</div>
-							<div class="carousel-item">
-								<h3>African Forest</h3>
-								<h4>28 October, 2018</h4>
-								<p>Duis non condimentum nunc. Nunc quis turpis eu est tincidunt rutrum. Cras a purus quis sem tincidunt egestas vel id lacus. Nunc sed volutpat erat. Duis sollicitudin.</p>
-							</div>
-						</div>
-						
-						<div class="carousel-control">
-							<a class="control-prev" href="#reviews-carousel" role="button" data-slide="prev">
-								<span class="flaticon-left-arrow" aria-hidden="true"></span>
-								<span class="sr-only">Previous</span>
-							</a>
-							<a class="control-next" href="#reviews-carousel" role="button" data-slide="next">
-								<span class="flaticon-right-arrow-1" aria-hidden="true"></span>
-								<span class="sr-only">Next</span>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	{% partial 'records/feedback' %}
 </section>
 <!-- Testimonials -->

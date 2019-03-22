@@ -1,0 +1,39 @@
+[records]
+activeOnly = 0
+areaSlug = "services"
+categorySlug = "{{ :category }}"
+tagSlug = "{{ :tag }}"
+recordPage = 0
+recordPageSlug = "{{ :record }}"
+limit = 10
+pageSlug = "{{ :page }}"
+orderBy = "name"
+orderByDirection = "ASC"
+==
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="section-title text-center">
+				<h2><span>Our Services</span></h2>
+				<p>Sorem ipsum dolor sit amet, consectetur adipisicing Suscipit votas aperiam Sorem ipsum dolor consectur adipisicing elit.</p>
+			</div>
+		</div>
+	</div>
+	
+	
+	<div class="row">
+	    
+	    {% for record in records.items %}
+			<div class="col-sm-6 col-md-6 col-lg-4">
+				<div class="service-item text-center wow fadeIn">
+					<div class="icon">
+						<i class="{{ record.url }}"></i>
+					</div>
+					<h3> {{ record.name }} </h3>
+					<p> {{ record.description }} </p>
+				</div>
+			</div>
+		{% endfor %}
+		
+	</div>
+</div>
