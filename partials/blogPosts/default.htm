@@ -1,0 +1,62 @@
+==
+{% set posts = blogPosts.posts %}
+
+
+
+{% for post in posts %}
+    <div class="news-block">
+    	<div class="news-thumb">
+    		<a href="{{ post.url }}">
+    			<img src="{{ 'assets/img/news/1.jpg'|theme }}" alt="">
+    		</a>
+    	</div>
+    	<div class="news-bottom">
+    		<ul class="post-meta list-inline">
+    			<li class="list-inline-item"><i class="fa fa-calendar"></i> 
+    			    Posted
+                    {% if post.categories.count %} in {% endif %}
+                    {% for category in post.categories %}
+                        <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                    on {{ post.published_at|date('M d, Y') }} 
+                </li>
+    		</ul>
+    		<h3><a href="{{'blog-single'|page}}">{{ post.title }}</a></h3>
+    		<p>{{ post.summary|raw }}</p>
+    		<a href="{{'blog-single'|page}}" class="btn btn-link">Continue Reading <i class="fa fa-angle-double-right"></i></a>
+    	</div>
+    </div>
+{% else %}
+    <div class="no-data">{{ blogPosts.noPostsMessage }}</div>
+{% endfor %}
+
+
+
+
+{% if posts.lastPage > 1 %}
+<div class="pagination-container">
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li>
+                <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">
+                    <span aria-hidden="true"><i class="fa fa-angle-double-right"></i></span>
+                </a>
+            </li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li>
+                <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">
+                    <span aria-hidden="true"><i class="fa fa-angle-double-right"></i></span>
+                </a>
+            </li>
+        {% endif %}
+    </ul>
+</div>
+{% endif %}
